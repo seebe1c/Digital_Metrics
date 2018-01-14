@@ -151,7 +151,7 @@ a:hover {
 
 .summary_section {
     padding: 2em;
-    width: 33.33333%;
+    width: 30%;
     float: left;
     margin-right: 0;
     display: inline;
@@ -251,7 +251,7 @@ i {
 
 .graph {
     border: #cccccc solid 1px;
-    width: 40%;
+    width: 50%;
     margin: 32px;
 }
 
