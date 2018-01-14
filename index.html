@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Metrics</title>
+    <link href="https://fonts.googleapis.com/css?family=Asap:400,600|Overpass:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="reset.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+        // Load Charts and the corechart package.
+        google.charts.load('current', {'packages':['corechart']});
+
+        // Draw the pie chart for Distance when Charts is loaded.
+        google.charts.setOnLoadCallback(drawDistanceChart);
+
+        // Draw the pie chart for Finance when Charts is loaded.
+        google.charts.setOnLoadCallback(drawFinanceChart);
+
+        // Draw the pie chart for Service when Charts is loaded.
+        google.charts.setOnLoadCallback(drawServiceChart);
+
+        // Draw the pie chart for Sale Type when Charts is loaded.
+        google.charts.setOnLoadCallback(drawSaleTypeChart);
+
+        // Draw the pie chart for Order Type when Charts is loaded.
+        google.charts.setOnLoadCallback(drawOrderTypeChart);
+
+        // Draw the pie chart for Make & Model when Charts is loaded.
+        google.charts.setOnLoadCallback(drawMakeModelChart);
+
+
+        // Callback that draws the pie chart for Distance.
+        function drawDistanceChart() {
+
+            // Create the data table for Distance.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Miles');
+            data.addColumn('number', 'Distance');
+            data.addRows([
+                ['0-10m', 1045],
+                ['10-20m', 1143],
+                ['20-30m', 1230],
+                ['30-40m', 1525],
+                ['40-50m', 546]
+            ]);
+
+            // Set options for Distance.
+            var options = {title:'Distance',
+                width:500,
+                height:250};
+
+            // Instantiate and draw the chart for Distance.
+            var chart = new google.visualization.PieChart(document.getElementById('Distance_chart_div'));
+            chart.draw(data, options);
+        }
+
+        // Callback that draws the pie chart for Finance.
+        function drawFinanceChart() {
+
+            // Create the data table for Finance.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Options');
+            data.addColumn('number', 'Customers');
+            data.addRows([
+                ['HP', 1596],
+                ['PCP', 2487],
+                ['Cash', 1876]
+            ]);
+
+            // Set options for Finance chart.
+            var options = {title:'Finance',
+                width:500,
+                height:250};
+
+            // Instantiate and draw the chart for Finance.
+            var chart = new google.visualization.PieChart(document.getElementById('Finance_chart_div'));
+            chart.draw(data, options);
+        }
+
+        // Callback that draws the pie chart for Service.
+        function drawServiceChart() {
+
+            // Create the data table for Service.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Contract');
+            data.addColumn('number', 'Customers');
+            data.addRows([
+                ['With service contract', 2801],
+                ['Without service contract', 1007]
+            ]);
+
+            // Set options for Service.
+            var options = {title:'Service',
+                width:500,
+                height:250};
+
+            // Instantiate and draw the chart for Service.
+            var chart = new google.visualization.PieChart(document.getElementById('Service_chart_div'));
+            chart.draw(data, options);
+        }
+
+        // Callback that draws the pie chart for Sale Type.
+        function drawSaleTypeChart() {
+
+            // Create the data table for Sale Type.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Type');
+            data.addColumn('number', 'Customers');
+            data.addRows([
+                ['New', 1666],
+                ['Used', 1653],
+                ['Parts', 4907],
+                ['Service', 765]
+            ]);
+
+            // Set options for Sale Type.
+            var options = {title:'Sale Type',
+                width:500,
+                height:250};
+
+            // Instantiate and draw the chart for Sale Type.
+            var chart = new google.visualization.PieChart(document.getElementById('SaleType_chart_div'));
+            chart.draw(data, options);
+        }
+
+
+        // Callback that draws the pie chart for Order Type.
+        function drawOrderTypeChart() {
+
+            // Create the data table for Order Type.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Type');
+            data.addColumn('number', 'Customers');
+            data.addRows([
+                ['Employee', 1473],
+                ['Fleet', 811],
+                ['Motability', 1093],
+                ['Retail', 2093],
+                ['Trade', 297]
+            ]);
+
+            // Set options for Order Type.
+            var options = {title:'Order Type',
+                width:500,
+                height:250};
+
+            // Instantiate and draw the chart for Order Type.
+            var chart = new google.visualization.PieChart(document.getElementById('OrderType_chart_div'));
+            chart.draw(data, options);
+        }
+
+        // Callback that draws the pie chart for Make & Model.
+        function drawMakeModelChart() {
+
+            // Create the data table for Make & Model.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Make & Model');
+            data.addColumn('number', 'Customers');
+            data.addRows([
+                ['Ford Custom', 9034],
+                ['Ford Ka+', 6208],
+                ['Ford BMAX', 5105],
+                ['Peugeot 2008', 4971],
+                ['Ford Ecosport', 4826],
+                ['Ford Ranger', 4138]
+            ]);
+
+            // Set options for Make & Model.
+            var options = {title:'Top 6 Make & Model Sales',
+                width:500,
+                height:250};
+
+            // Instantiate and draw the chart for Make & Model.
+            var chart = new google.visualization.PieChart(document.getElementById('MakeModel_chart_div'));
+            chart.draw(data, options);
+        }
+
+    </script>
+</head>
+
+<!-- This is the Lab59 header section -->
+    <div class="lab59">
+        <div class="lab59_container">
+            <img src="https://image.ibb.co/kHZBxm/lab59_logo_small_3.jpg">
+            <span>Digital Metrics and Attribution</span>
+        </div>
+    </div>
+<!-- This is the main banner section -->
+    <div class="main_banner">
+        <div class="main_banner_container">
+            <div class="headline">
+                <h4>DECISION MAKING MEASURING TOOLS</h4>
+                <h1>DIGITAL METRICS AND ATTRIBUTION</h1>
+            </div>
+        </div>
+    </div>
+<!-- This is the navigation bar section -->
+    <div class="navigation">
+        <ul class="desktop_nav">
+            <li><a href="iframe_data.html">Distance</a></li>
+            <li><a href="iframe_data.html">Finance</a></li>
+            <li><a href="iframe_data.html">Service</a></li>
+            <li><a href="iframe_data.html">Sale type</a></li>
+            <li><a href="iframe_data.html">Order type</a></li>
+            <li><a href="iframe_data.html">Make & Model</a></li>
+        </ul>
+    </div>
+<!-- This is the Summary section -->
+    <div class="summary">
+        <h1>The most effective parameters to increase lifetime value are*:</h1>
+        <div class="summary_content">
+            <div class="summary_section">
+                <div class="summary_distance">
+                    <div class="data">
+                        <i class="fa fa-map-marker fa-5x"></i>
+                        <h2>Distance</h2>
+                        <br>
+                        btw 0 and 40 miles
+                    </div>
+                </div>
+            </div>
+            <div class="summary_section">
+                <div class="summary_finance">
+                    <i class="fa fa-gbp fa-5x"></i>
+                    <div class="data">
+                        <h2>Finance</h2>
+                        <br>
+                        PCP
+                    </div>
+                </div>
+            </div>
+            <div class="summary_section">
+                <div class="summary_service">
+                    <i class="fa fa-calendar fa-5x"></i>
+                    <div class="data">
+                        <h2>Service</h2>
+                        <br>
+                        with service plan
+                    </div>
+                </div>
+            </div>
+            <div class="summary_section">
+                <div class="summary_saleType">
+                    <i class="fa fa-bell fa-5x"></i>
+                    <div class="data">
+                        <h2>Sale Type</h2>
+                        <br>
+                        parts, used then new
+                    </div>
+                </div>
+            </div>
+            <div class="summary_section">
+                <div class="summary_orderType">
+                    <i class="fa fa-folder-open fa-5x"></i>
+                    <div class="data">
+                        <h2>Order Type</h2>
+                        <br>
+                        retail, but highest churn
+                    </div>
+                </div>
+            </div>
+            <div class="summary_section">
+                <div class="summary_makeModel">
+                    <i class="fa fa-car fa-5x"></i>
+                    <div class="data">
+                        <h2>Make & Model</h2>
+                        <br>
+                        Ford Custom
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--Table and divs that hold the pie charts-->
+    <div class="container_pie">
+        <h1>6 Parameters broken down</h1>
+        <table class="columns">
+            <tr>
+                <td><div id="Distance_chart_div" style="border: 1px solid #ccc"></div></td>
+                <td><div id="Finance_chart_div" style="border: 1px solid #ccc"></div></td>
+                <td><div id="Service_chart_div" style="border: 1px solid #ccc"></div></td>
+                <td><div id="SaleType_chart_div" style="border: 1px solid #ccc"></div></td>
+                <td><div id="OrderType_chart_div" style="border: 1px solid #ccc"></div></td>
+                <td><div id="MakeModel_chart_div" style="border: 1px solid #ccc"></div></td>
+            </tr>
+        </table>
+    </div>
+
+<!--Individual customer summary-->
+    <div class="individual">
+        <h1>Top 100 retail customer profile sorted by gross margin%:</h1>
+        <div class="individual_content">
+            <div class="individual_section">
+                <div class="individual_GM">
+                    <div class="data">
+                        <i class="fa fa-university fa-3x"></i>
+                        <div class="data_block">
+                            <h2>Gross Margin%</h2>
+                            <br>
+                            Top 10% of customers bring in 70% Gross Margin
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="individual_section">
+                <div class="individual_churn">
+                    <div class="data">
+                        <i class="fa fa-cogs fa-3x"></i>
+                        <div class="data_block">
+                            <h2>Churn%</h2>
+                            <br>
+                            Top customer churn rate is 30%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="individual_section">
+                <div class="individual_salecombine">
+                    <div class="data">
+                        <i class="fa fa-cart-plus fa-3x"></i>
+                        <div class="data_block">
+                            <h2>Combined Sale type</h2>
+                            <br>
+                            Top customers buy new cars with a service plan
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- This is the distance map section
+
+        <div id="chart"></div>
+        <div id="buttons">
+             <button type="button" class="panning up"><i class="fa fa-arrow-up"></i></button>
+             <button type="button" class="panning down"><i class="fa fa-arrow-down"></i></button>
+             <button type="button" class="panning left"><i class="fa fa-arrow-left"></i></button>
+             <button type="button" class="panning right"><i class="fa fa-arrow-right"></i></button>
+             <button type="button" class="zooming in"><i class="fa fa-plus"></i></button>
+             <button type="button" class="zooming out"><i class="fa fa-minus"></i></button>
+        </div>
+
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="app.js"></script>-->
+
+
+</body>
+</html># Digital_Metrics
