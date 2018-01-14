@@ -112,11 +112,11 @@ h1 {
 
 a {
     text-decoration: none;
-    color: darkgray;
+    color: white;
 }
 
 a:hover {
-    color: black;
+    color: darkgray;
 }
 
 /* media css rules */
@@ -242,8 +242,11 @@ i {
 }
 
 .linkTosummary {
-    padding-left: 32px;
-    color: darkred;
+    padding: 16px;
+    color: white;
+    background-color: darkred;
+    width: 20%;
+    margin-left: 32px;
 }
 
 .graph {
