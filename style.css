@@ -187,7 +187,8 @@ a:hover {
 
 td {
     display: inline-flex;
-    justify-content: space-between;
+    padding: 10px;
+    margin-left: 10px;
     flex-wrap: wrap;
     justify-content: center;
     width: auto;
