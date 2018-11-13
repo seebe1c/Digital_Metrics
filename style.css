@@ -20,26 +20,26 @@ body {
 }
 
 /* header banner */
-.lab59 {
+.EMEA_Metrics {
   background-color: black;
   color: white;
 }
 
-.lab59_container {
+.emea_container {
   display: flex;
   align-items: center;
   max-width: 960px;
   margin: 0 auto;
 }
 
-.lab59_container img {
+.emea_container img {
   height: 1.5em;
   padding-right: 0.5rem;
   padding-left: 1rem;
   border-style: none;
 }
 
-.lab59_container span {
+.emea_container span {
   padding: 0.66rem 0;
   font-size: 1rem;
 }
