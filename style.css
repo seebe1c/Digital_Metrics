@@ -1,0 +1,86 @@
+/* header banner */
+
+.header_container {
+  display: flex;
+  align-items: center;
+  max-width: 960px;
+  padding-top:1rem;
+}
+
+.header_container img {
+  height: 2em;
+  padding-right: 0.5rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  border-style: none;
+  background: url(https://seebe1c.github.io/APMtest/);
+}
+
+
+/* navigation section */
+.navigation {
+  background-color: #001c71;
+  color: white;
+  display: block;
+}
+
+.desktop_nav {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75em 0;
+}
+
+.desktop_nav li {
+  display: list-item;
+  list-style-type: none;
+  text-align: justify;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: darkgray;
+}
+
+/* Body index.html */
+
+h1 {
+	color: #b12028;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 900;
+}
+
+h2 {
+	color: #222223;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+}
+
+p {
+	font-family: 'Poppins', sans-serif;
+}
+
+img {
+	float: left;
+	padding: 20px;
+}
+
+
+
+footer {
+	clear: both;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+}
